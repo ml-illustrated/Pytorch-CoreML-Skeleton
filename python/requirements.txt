@@ -1,0 +1,9 @@
+torch
+librosa
+torchlibrosa
+SoundFile
+onnx
+onnx-coreml
+coremltools
+matplotlib
+numba==0.48.*
