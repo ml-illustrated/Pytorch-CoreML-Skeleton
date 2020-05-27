@@ -40,7 +40,7 @@ class Pytorch_CoreML_SkeletonTests: XCTestCase {
         let inputConstraint: MLFeatureDescription = model.model.modelDescription
             .inputDescriptionsByName[inputName]!
 
-        let input_batch_size: Int = Int(truncating: (inputConstraint.multiArrayConstraint?.shape[0])! )
+        // let input_batch_size: Int = Int(truncating: (inputConstraint.multiArrayConstraint?.shape[0])! )
         let input_samples: Int = Int(truncating: (inputConstraint.multiArrayConstraint?.shape[1])! )
 
         // read the same WAV file used in PyTorch
@@ -72,13 +72,21 @@ class Pytorch_CoreML_SkeletonTests: XCTestCase {
             fatalError("Can not get a float handle to buffer")
         }
         
-        // allocate a ML Array & copy samples over
-        let array_shape = [input_batch_size as NSNumber, input_samples as NSNumber]
+        // allocate a ML Array & populate with audio samples
+        let ptr = UnsafeMutableRawPointer(mutating: bufferData )
+        let array_shape = [1, input_samples as NSNumber]
+        let audioData = try! MLMultiArray(dataPointer: ptr,
+                                 shape: array_shape,
+                                 dataType: .float32,
+                                 strides: [array_shape[1], 1])
+
+        /* alternative way of looping through each sample
         let audioData = try! MLMultiArray(shape: array_shape, dataType: MLMultiArrayDataType.float32 )
         let ptr = UnsafeMutablePointer<Float32>(OpaquePointer(audioData.dataPointer))
         for i in 0..<input_samples {
             ptr[i] = Float32(bufferData[i])
         }
+         */
 
         // create the input dictionary as { 'input.1' : [<wave floats>] }
         let inputs: [String: Any] = [
