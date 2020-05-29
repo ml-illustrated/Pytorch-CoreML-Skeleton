@@ -33,8 +33,6 @@ class Pytorch_CoreML_SkeletonTests: XCTestCase {
         let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
         let expected_spectrogram: [[NSNumber]] = try! JSONSerialization.jsonObject(with: data) as! [[NSNumber]]
 
-        print( "expected spec: \(expected_spectrogram.count) \(expected_spectrogram[0].count)")
-
         // read the input shapes of our model
         let inputName = "input.1"
         let inputConstraint: MLFeatureDescription = model.model.modelDescription
@@ -113,12 +111,11 @@ class Pytorch_CoreML_SkeletonTests: XCTestCase {
         // compare every element of our spectrogram with those from the JSON file
         for i in 0..<expected_spectrogram.count {
             let spec_row = expected_spectrogram[i] as [NSNumber]
-
             for j in 0..<spec_row.count {
-                let test_idx: [NSNumber] = [ NSNumber(value: i), NSNumber(value: j) ]
+                let test_idx: [NSNumber] = [ 0, 0, NSNumber(value: i), NSNumber(value: j) ]
                 let val = output_spectrogram[ test_idx ].floatValue
-                XCTAssertLessThan( abs( val - spec_row[j].floatValue ), 0.15,
-                                   "spec vals different at \(i) \(j)!" )
+                XCTAssertLessThan( abs( val - spec_row[j].floatValue ), 0.001,
+                                   "spec vals different at \(i) \(j) \(val)!" )
             }
         }
 

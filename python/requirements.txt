@@ -3,6 +3,7 @@ librosa
 torchlibrosa
 SoundFile
 onnx
+onnxruntime
 onnx-coreml
 coremltools
 matplotlib

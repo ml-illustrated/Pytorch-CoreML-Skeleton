@@ -14,10 +14,10 @@
 		7435E127247C437C00CF07F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7435E126247C437C00CF07F3 /* Assets.xcassets */; };
 		7435E12A247C437C00CF07F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7435E128247C437C00CF07F3 /* LaunchScreen.storyboard */; };
 		7435E135247C437C00CF07F3 /* Pytorch_CoreML_SkeletonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435E134247C437C00CF07F3 /* Pytorch_CoreML_SkeletonTests.swift */; };
-		7435E140247C43A900CF07F3 /* wave__spec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7435E13F247C43A900CF07F3 /* wave__spec.mlmodel */; };
-		7435E141247C43A900CF07F3 /* wave__spec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7435E13F247C43A900CF07F3 /* wave__spec.mlmodel */; };
 		7435E143247C43BB00CF07F3 /* bonjour.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7435E142247C43BA00CF07F3 /* bonjour.wav */; };
-		7435E145247C43C700CF07F3 /* spec_out.bonjour.json in Resources */ = {isa = PBXBuildFile; fileRef = 7435E144247C43C700CF07F3 /* spec_out.bonjour.json */; };
+		746CD089248097510024E8BD /* wave__spec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 746CD088248097510024E8BD /* wave__spec.mlmodel */; };
+		746CD08A248097510024E8BD /* wave__spec.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 746CD088248097510024E8BD /* wave__spec.mlmodel */; };
+		746CD08E24809C140024E8BD /* spec_out.bonjour.json in Resources */ = {isa = PBXBuildFile; fileRef = 746CD08D24809C140024E8BD /* spec_out.bonjour.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +42,9 @@
 		7435E130247C437C00CF07F3 /* Pytorch-CoreML-SkeletonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pytorch-CoreML-SkeletonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7435E134247C437C00CF07F3 /* Pytorch_CoreML_SkeletonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pytorch_CoreML_SkeletonTests.swift; sourceTree = "<group>"; };
 		7435E136247C437C00CF07F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7435E13F247C43A900CF07F3 /* wave__spec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = wave__spec.mlmodel; sourceTree = "<group>"; };
 		7435E142247C43BA00CF07F3 /* bonjour.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bonjour.wav; sourceTree = "<group>"; };
-		7435E144247C43C700CF07F3 /* spec_out.bonjour.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spec_out.bonjour.json; sourceTree = "<group>"; };
+		746CD088248097510024E8BD /* wave__spec.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = wave__spec.mlmodel; sourceTree = "<group>"; };
+		746CD08D24809C140024E8BD /* spec_out.bonjour.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spec_out.bonjour.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +90,9 @@
 				7435E11F247C437A00CF07F3 /* SceneDelegate.swift */,
 				7435E121247C437A00CF07F3 /* ViewController.swift */,
 				7435E123247C437A00CF07F3 /* Main.storyboard */,
+				746CD088248097510024E8BD /* wave__spec.mlmodel */,
 				7435E126247C437C00CF07F3 /* Assets.xcassets */,
 				7435E128247C437C00CF07F3 /* LaunchScreen.storyboard */,
-				7435E13F247C43A900CF07F3 /* wave__spec.mlmodel */,
 				7435E12B247C437C00CF07F3 /* Info.plist */,
 			);
 			path = "Pytorch-CoreML-Skeleton";
@@ -103,7 +103,7 @@
 			children = (
 				7435E134247C437C00CF07F3 /* Pytorch_CoreML_SkeletonTests.swift */,
 				7435E142247C43BA00CF07F3 /* bonjour.wav */,
-				7435E144247C43C700CF07F3 /* spec_out.bonjour.json */,
+				746CD08D24809C140024E8BD /* spec_out.bonjour.json */,
 				7435E136247C437C00CF07F3 /* Info.plist */,
 			);
 			path = "Pytorch-CoreML-SkeletonTests";
@@ -200,7 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7435E145247C43C700CF07F3 /* spec_out.bonjour.json in Resources */,
+				746CD08E24809C140024E8BD /* spec_out.bonjour.json in Resources */,
 				7435E143247C43BB00CF07F3 /* bonjour.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +214,7 @@
 			files = (
 				7435E122247C437A00CF07F3 /* ViewController.swift in Sources */,
 				7435E11E247C437A00CF07F3 /* AppDelegate.swift in Sources */,
-				7435E140247C43A900CF07F3 /* wave__spec.mlmodel in Sources */,
+				746CD089248097510024E8BD /* wave__spec.mlmodel in Sources */,
 				7435E120247C437A00CF07F3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,7 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7435E141247C43A900CF07F3 /* wave__spec.mlmodel in Sources */,
+				746CD08A248097510024E8BD /* wave__spec.mlmodel in Sources */,
 				7435E135247C437C00CF07F3 /* Pytorch_CoreML_SkeletonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
